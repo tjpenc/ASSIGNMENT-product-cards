@@ -87,9 +87,43 @@ h1 {
 }
 
 .relative {
-  position: relative;
+ 
 }
 
 .absolute {
+  z-index: 2;
   position: absolute;
+}
+
+@media (max-aspect-ratio: 3/2) {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    border: double 5px burlywood;
+    width: 25%;
+    flex-flow: 0 0 33.333%;
+  }
+}
+
+@media (max-aspect-ratio: 8/5) {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: purple;
+    border: double 5px rgb(220, 235, 13);
+    width: 25%;
+    flex-flow: 0 0 33.333%;
+  }
+}
+
+@media (aspect-ratio: 1/1) {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    border: double 5px rgb(31, 158, 69);
+    width: 25%;
+    flex-flow: 0 0 33.333%;
+  }
 }
